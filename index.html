@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KasirKu - Meja Kasir Online</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-blur bg-blur-1"></div>
+    <div class="bg-blur bg-blur-2"></div>
+
+    <main class="app-shell">
+      <section id="loginSection" class="card login-card">
+        <h1>KasirKu</h1>
+        <p class="subtitle">Meja Kasir Online • Neo Brutalism</p>
+
+        <form id="loginForm" class="login-form">
+          <label for="userId">User ID</label>
+          <input id="userId" name="userId" type="text" placeholder="Masukkan user id" required />
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Masukkan password" required />
+
+          <div class="btn-row">
+            <button type="submit" class="btn btn-ok">OK</button>
+            <button type="button" id="cancelBtn" class="btn btn-cancel">CANCEL</button>
+          </div>
+        </form>
+
+        <p id="loginMessage" class="message" aria-live="polite"></p>
+      </section>
+
+      <section id="dashboardSection" class="hidden">
+        <header class="card topbar">
+          <div>
+            <h2>Dashboard KasirKu</h2>
+            <p>Selamat datang, <strong id="activeUser">-</strong></p>
+          </div>
+        </header>
+
+        <nav class="card navbar">
+          <ul class="menu-horizontal" id="mainMenu">
+            <li class="menu-item has-dropdown">
+              <button>Profil</button>
+              <ul class="dropdown">
+                <li>Ganti Password</li>
+                <li>Add Admin + Key Password</li>
+                <li>Add User + Key Password</li>
+              </ul>
+            </li>
+            <li class="menu-item has-dropdown">
+              <button>Master</button>
+              <ul class="dropdown">
+                <li>Daftar Area</li>
+                <li>Daftar Langganan</li>
+                <li>Daftar Stok</li>
+              </ul>
+            </li>
+            <li class="menu-item has-dropdown">
+              <button>Penjualan</button>
+              <ul class="dropdown">
+                <li>Transaksi Penjualan 30 Hari</li>
+                <li>Transaksi Return Penjualan</li>
+                <li>Cetak Ulang Nota Penjualan</li>
+              </ul>
+            </li>
+            <li class="menu-item has-dropdown">
+              <button>Piutang</button>
+              <ul class="dropdown">
+                <li>Transaksi Penagihan Piutang</li>
+              </ul>
+            </li>
+            <li class="menu-item has-dropdown">
+              <button>Pembelian</button>
+              <ul class="dropdown">
+                <li>Transaksi Pembelian</li>
+                <li>Return Pembelian</li>
+              </ul>
+            </li>
+            <li class="menu-item has-dropdown">
+              <button>Hutang</button>
+              <ul class="dropdown">
+                <li>Transaksi Pembayaran Hutang</li>
+              </ul>
+            </li>
+            <li class="menu-item has-dropdown wide">
+              <button>Database</button>
+              <ul class="dropdown">
+                <li>Pilih Periode Database</li>
+                <li>Index Database</li>
+                <li>Backup Database</li>
+                <li>Refresh Database</li>
+                <li>Transfer Data Penjualan Olympic</li>
+                <li>Update Data Penjualan</li>
+                <li>Dropbox</li>
+                <li>Proses SPP</li>
+                <li>Reset Data Opname</li>
+                <li>Re-Update Saldo Periode Sebelumnya</li>
+                <li>Export Raw Data ke Excel</li>
+                <li>Tutup Buku Bulanan</li>
+              </ul>
+            </li>
+            <li class="menu-item has-dropdown">
+              <button>Informasi</button>
+              <ul class="dropdown">
+                <li>Help</li>
+                <li>Tentang Program</li>
+                <li>Developer Biodata, Kontak, Sosial</li>
+              </ul>
+            </li>
+            <li class="menu-item has-dropdown">
+              <button>Exit</button>
+              <ul class="dropdown">
+                <li id="exitProgram">Exit Program</li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <section class="card content-panel" id="contentPanel">
+          <h3>Panel Fitur</h3>
+          <p>Klik menu di navbar untuk menampilkan fitur di sini.</p>
+          <div id="featureOutput" class="feature-output"></div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2026 KasirKu • Tema Neo Brutalism Orange-Hitam & Putih-Biru</p>
+      <p>User-friendly, responsif, dan scroll halus dengan sentuhan blur 3D.</p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
